@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		D25F55D2208D104700D2DAB4 /* BevtechCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25F55C8208D104700D2DAB4 /* BevtechCore.framework */; };
-		D25F55D7208D104700D2DAB4 /* BevtechCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25F55D6208D104700D2DAB4 /* BevtechCoreTests.swift */; };
 		D25F55D9208D104700D2DAB4 /* BevtechCore.h in Headers */ = {isa = PBXBuildFile; fileRef = D25F55CB208D104700D2DAB4 /* BevtechCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D25F55F1208D11DA00D2DAB4 /* NSAttributedString+Sizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25F55F0208D11DA00D2DAB4 /* NSAttributedString+Sizing.swift */; };
+		D25F55F3208D12EF00D2DAB4 /* String+Sizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25F55F2208D12EF00D2DAB4 /* String+Sizing.swift */; };
+		D25F55F5208D138100D2DAB4 /* UILabel+Sizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25F55F4208D138100D2DAB4 /* UILabel+Sizing.swift */; };
+		D25F55F7208D140F00D2DAB4 /* SizingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25F55F6208D140F00D2DAB4 /* SizingTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +30,11 @@
 		D25F55CB208D104700D2DAB4 /* BevtechCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BevtechCore.h; sourceTree = "<group>"; };
 		D25F55CC208D104700D2DAB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D25F55D1208D104700D2DAB4 /* BevtechCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BevtechCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D25F55D6208D104700D2DAB4 /* BevtechCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BevtechCoreTests.swift; sourceTree = "<group>"; };
 		D25F55D8208D104700D2DAB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D25F55F0208D11DA00D2DAB4 /* NSAttributedString+Sizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Sizing.swift"; sourceTree = "<group>"; };
+		D25F55F2208D12EF00D2DAB4 /* String+Sizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Sizing.swift"; sourceTree = "<group>"; };
+		D25F55F4208D138100D2DAB4 /* UILabel+Sizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Sizing.swift"; sourceTree = "<group>"; };
+		D25F55F6208D140F00D2DAB4 /* SizingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizingTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,7 @@
 		D25F55CA208D104700D2DAB4 /* BevtechCore */ = {
 			isa = PBXGroup;
 			children = (
+				D25F55EF208D11C700D2DAB4 /* Extensions */,
 				D25F55CB208D104700D2DAB4 /* BevtechCore.h */,
 				D25F55CC208D104700D2DAB4 /* Info.plist */,
 			);
@@ -80,10 +87,20 @@
 		D25F55D5208D104700D2DAB4 /* BevtechCoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				D25F55D6208D104700D2DAB4 /* BevtechCoreTests.swift */,
+				D25F55F6208D140F00D2DAB4 /* SizingTests.swift */,
 				D25F55D8208D104700D2DAB4 /* Info.plist */,
 			);
 			path = BevtechCoreTests;
+			sourceTree = "<group>";
+		};
+		D25F55EF208D11C700D2DAB4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D25F55F0208D11DA00D2DAB4 /* NSAttributedString+Sizing.swift */,
+				D25F55F2208D12EF00D2DAB4 /* String+Sizing.swift */,
+				D25F55F4208D138100D2DAB4 /* UILabel+Sizing.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +165,7 @@
 				TargetAttributes = {
 					D25F55C7208D104700D2DAB4 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					D25F55D0208D104700D2DAB4 = {
@@ -196,6 +214,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D25F55F3208D12EF00D2DAB4 /* String+Sizing.swift in Sources */,
+				D25F55F5208D138100D2DAB4 /* UILabel+Sizing.swift in Sources */,
+				D25F55F1208D11DA00D2DAB4 /* NSAttributedString+Sizing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D25F55D7208D104700D2DAB4 /* BevtechCoreTests.swift in Sources */,
+				D25F55F7208D140F00D2DAB4 /* SizingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +355,7 @@
 		D25F55DD208D104700D2DAB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -347,6 +369,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bevtech.BevtechCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -355,6 +378,7 @@
 		D25F55DE208D104700D2DAB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -376,6 +400,7 @@
 		D25F55E0208D104700D2DAB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4GY5S75A66;
 				INFOPLIST_FILE = BevtechCoreTests/Info.plist;
@@ -390,6 +415,7 @@
 		D25F55E1208D104700D2DAB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4GY5S75A66;
 				INFOPLIST_FILE = BevtechCoreTests/Info.plist;
