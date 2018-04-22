@@ -23,6 +23,7 @@ class SizingTests: XCTestCase {
 
     func testExample() {
         XCTAssert(true)
+        XCTAssert(false)
     }
 
     func testPerformanceExample() {
