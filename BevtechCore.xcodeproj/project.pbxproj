@@ -11,7 +11,6 @@
 		D25F55D9208D104700D2DAB4 /* BevtechCore.h in Headers */ = {isa = PBXBuildFile; fileRef = D25F55CB208D104700D2DAB4 /* BevtechCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D25F55F1208D11DA00D2DAB4 /* NSAttributedString+Sizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25F55F0208D11DA00D2DAB4 /* NSAttributedString+Sizing.swift */; };
 		D25F55F3208D12EF00D2DAB4 /* String+Sizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25F55F2208D12EF00D2DAB4 /* String+Sizing.swift */; };
-		D25F55F5208D138100D2DAB4 /* UILabel+Sizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25F55F4208D138100D2DAB4 /* UILabel+Sizing.swift */; };
 		D25F55F7208D140F00D2DAB4 /* SizingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25F55F6208D140F00D2DAB4 /* SizingTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +32,6 @@
 		D25F55D8208D104700D2DAB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D25F55F0208D11DA00D2DAB4 /* NSAttributedString+Sizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Sizing.swift"; sourceTree = "<group>"; };
 		D25F55F2208D12EF00D2DAB4 /* String+Sizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Sizing.swift"; sourceTree = "<group>"; };
-		D25F55F4208D138100D2DAB4 /* UILabel+Sizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Sizing.swift"; sourceTree = "<group>"; };
 		D25F55F6208D140F00D2DAB4 /* SizingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizingTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,7 +96,6 @@
 			children = (
 				D25F55F0208D11DA00D2DAB4 /* NSAttributedString+Sizing.swift */,
 				D25F55F2208D12EF00D2DAB4 /* String+Sizing.swift */,
-				D25F55F4208D138100D2DAB4 /* UILabel+Sizing.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -215,7 +212,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D25F55F3208D12EF00D2DAB4 /* String+Sizing.swift in Sources */,
-				D25F55F5208D138100D2DAB4 /* UILabel+Sizing.swift in Sources */,
 				D25F55F1208D11DA00D2DAB4 /* NSAttributedString+Sizing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
