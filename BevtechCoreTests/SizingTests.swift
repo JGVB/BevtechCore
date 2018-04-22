@@ -11,24 +11,64 @@ import XCTest
 
 class SizingTests: XCTestCase {
 
-    override func setUp() {
-        super.setUp()
+    private let attString = NSAttributedString(string: "short", attributes: [.font: UIFont.boldSystemFont(ofSize: 10)])
+    private let attStringLargeFont = NSAttributedString(string: "short", attributes: [.font: UIFont.boldSystemFont(ofSize: 50)])
+    private let attStringLong = NSAttributedString(string: "long long long long long long long long long long long long long long long", attributes: [.font: UIFont.boldSystemFont(ofSize: 10)])
+
+
+    // MARK: Height
+
+    func testAttHeight() {
+        XCTAssertEqual(
+            attString.height(withConstrainedWidth: 100),
+            ceil(UIFont.boldSystemFont(ofSize: 10).lineHeight)
+        )
+        XCTAssertEqual(
+            attString.height(withConstrainedWidth: 4),
+            ceil(UIFont.boldSystemFont(ofSize: 10).lineHeight * 5)
+        )
+        XCTAssertEqual(
+            attStringLargeFont.height(withConstrainedWidth: 20),
+            ceil(UIFont.boldSystemFont(ofSize: 50).lineHeight * 5)
+        )
     }
 
-    override func tearDown() {
-        super.tearDown()
+    func testStringHeight() {
+        XCTAssertEqual(
+            "short".height(withConstrainedWidth: 100, font: .systemFont(ofSize: 10)),
+            ceil(UIFont.systemFont(ofSize: 10).lineHeight)
+        )
+        XCTAssertEqual(
+            "short".height(withConstrainedWidth: 4, font: .systemFont(ofSize: 10)),
+            ceil(UIFont.systemFont(ofSize: 10).lineHeight * 5)
+        )
+        XCTAssertEqual(
+            "long long long long long long long long long long long long long long long".height(withConstrainedWidth: 50, font: .systemFont(ofSize: 10)),
+            ceil(UIFont.systemFont(ofSize: 10).lineHeight * 8)
+        )
     }
 
-    func testExample() {
-        XCTAssert(true)
-        XCTAssert(false)
+    // MARK: Width
+
+    func testAttWidth() {
+        XCTAssertEqual(
+            attString.width(withConstrainedHeight: UIFont.boldSystemFont(ofSize: 10).lineHeight),
+            27
+        )
+        XCTAssertEqual(
+            attStringLong.width(withConstrainedHeight: UIFont.boldSystemFont(ofSize: 10).lineHeight),
+            366
+        )
     }
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testStringWidth() {
+        XCTAssertEqual(
+            "short".width(withConstrainedHeight: UIFont.boldSystemFont(ofSize: 10).lineHeight, font: .boldSystemFont(ofSize: 10)),
+            27
+        )
+        XCTAssertEqual(
+            "long long long long long long long long long long long long long long long".width(withConstrainedHeight: UIFont.boldSystemFont(ofSize: 10).lineHeight, font: .boldSystemFont(ofSize: 10)),
+            366
+        )
     }
-
 }
